@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monstruopedia Eco</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background: linear-gradient(180deg,#e8f5e9,#f1efe3);
+        color:#2e3d2f;
+    }
+
+    /* CABECERA NATURAL */
+    header{
+        background: linear-gradient(135deg,#2e7d32,#6d4c41);
+        color:white;
+        text-align:center;
+        padding:30px;
+        border-bottom-left-radius:40px;
+        border-bottom-right-radius:40px;
+    }
+
+    header h1{
+        font-size:2.2em;
+    }
+
+    /* MENU ECO */
+    nav{
+        background:#355e3b;
+        padding:15px;
+        border-radius:0 0 25px 25px;
+    }
+
+    nav ul{
+        list-style:none;
+        display:flex;
+        justify-content:center;
+        gap:30px;
+    }
+
+    nav a{
+        color:#e8f5e9;
+        text-decoration:none;
+        font-weight:bold;
+        cursor:pointer;
+    }
+
+    nav a:hover{
+        color:#c8e6c9;
+        text-decoration:underline;
+    }
+
+    /* SECCIONES */
+    section{
+        display:none;
+        padding:30px;
+    }
+
+    section.active{
+        display:block;
+    }
+
+    h2{
+        text-align:center;
+        margin-bottom:20px;
+        color:#2e7d32;
+    }
+
+    /* TARJETAS ORGÁNICAS */
+    .contenedor{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+        gap:20px;
+    }
+
+    .tarjeta{
+        background:#ffffffcc;
+        backdrop-filter: blur(4px);
+        border-radius:25px;
+        padding:18px;
+        box-shadow:0 6px 15px rgba(0,0,0,0.15);
+        text-align:center;
+        border:2px solid #c8e6c9;
+        transition:transform 0.3s;
+    }
+
+    .tarjeta:hover{
+        transform:scale(1.05);
+    }
+
+    .img{
+        font-size:65px;
+        margin:10px 0;
+    }
+
+    .tarjeta button{
+        margin-top:10px;
+        padding:8px 14px;
+        border:none;
+        border-radius:20px;
+        background:#2e7d32;
+        color:white;
+        cursor:pointer;
+    }
+
+    .tarjeta button:hover{
+        background:#1b5e20;
+    }
+
+    /* FOOTER NATURAL */
+    footer{
+        background:#355e3b;
+        color:white;
+        text-align:center;
+        padding:15px;
+        margin-top:20px;
+        border-top-left-radius:30px;
+        border-top-right-radius:30px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌿🐉 Monstruopedia de la Naturaleza</h1>
+    <p>Criaturas mágicas del mundo natural</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a onclick="mostrar('criaturas')">Criaturas</a></li>
+        <li><a onclick="mostrar('habitats')">Hábitats</a></li>
+        <li><a onclick="mostrar('poderes')">Poderes</a></li>
+    </ul>
+</nav>
+
+<!-- CRIATURAS -->
+<section id="criaturas" class="active">
+    <h2>🌱 Criaturas del Bosque</h2>
+
+    <div class="contenedor">
+
+        <div class="tarjeta">
+            <div class="img">🔥🐉🌿</div>
+            <h3>Dracofénix</h3>
+            <p>Ser de fuego nacido en volcanes naturales.</p>
+            <button onclick="alert('Nació del equilibrio entre fuego y tierra.')">Ver más</button>
+        </div>
+
+        <div class="tarjeta">
+            <div class="img">🌙🦎🌲</div>
+            <h3>Lunagarto</h3>
+            <p>Reptil del bosque que solo vive bajo la luna.</p>
+            <button onclick="alert('Se alimenta de luz lunar y savia.')">Ver más</button>
+        </div>
+
+        <div class="tarjeta">
+            <div class="img">⚡🐂🌳</div>
+            <h3>Tormentoro</h3>
+            <p>Guardián de tormentas en bosques antiguos.</p>
+            <button onclick="alert('Protege los árboles durante las tormentas.')">Ver más</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- HABITATS -->
+<section id="habitats">
+    <h2>🌳 Hábitats Naturales</h2>
+
+    <div class="contenedor">
+
+        <div class="tarjeta">
+            <div class="img">🌋🌿</div>
+            <h3>Volcanes vivos</h3>
+            <p>Montañas que respiran energía natural.</p>
+            <button onclick="alert('Zona de equilibrio entre fuego y vida.')">Ver más</button>
+        </div>
+
+        <div class="tarjeta">
+            <div class="img">🌲🌙</div>
+            <h3>Bosques lunares</h3>
+            <p>Selvas iluminadas solo por la luna.</p>
+            <button onclick="alert('Lugar sagrado de criaturas nocturnas.')">Ver más</button>
+        </div>
+
+        <div class="tarjeta">
+            <div class="img">🌧️🌳</div>
+            <h3>Selvas eléctricas</h3>
+            <p>Bosques donde la lluvia nunca se detiene.</p>
+            <button onclick="alert('Energía natural constante.')">Ver más</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- PODERES -->
+<section id="poderes">
+    <h2>🌿 Poderes de la Naturaleza</h2>
+
+    <div class="contenedor">
+
+        <div class="tarjeta">
+            <div class="img">🔥</div>
+            <h3>Dracofénix</h3>
+            <p>Poder: fuego natural regenerativo</p>
+            <p>Debilidad: exceso de agua</p>
+            <button onclick="alert('Equilibrio entre destrucción y vida')">Ver más</button>
+        </div>
+
+        <div class="tarjeta">
+            <div class="img">🌙</div>
+            <h3>Lunagarto</h3>
+            <p>Poder: invisibilidad nocturna</p>
+            <p>Debilidad: luz solar intensa</p>
+            <button onclick="alert('Solo aparece en ecosistemas salvajes')">Ver más</button>
+        </div>
+
+        <div class="tarjeta">
+            <div class="img">⚡</div>
+            <h3>Tormentoro</h3>
+            <p>Poder: control del clima</p>
+            <p>Debilidad: pérdida de energía natural</p>
+            <button onclick="alert('Protector del equilibrio climático')">Ver más</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>Rafael Rivera García — 2º ESO</p>
+</footer>
+
+<script>
+function mostrar(seccion){
+    document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+    document.getElementById(seccion).classList.add("active");
+}
+</script>
+
+</body>
+</html>
